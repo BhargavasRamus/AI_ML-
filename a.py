@@ -7,6 +7,8 @@ X=np.transpose(np.array(X_0, dtype=np.float64))
 Y=np.array(Y_0, dtype=np.float64)
 X_test = np.array([[1,1],[1,-1],[-1,1],[-1,-1]])
 
+X_1=X
+X_2=X
 N=0
 M=0
 for i in range(0,len(Y)):
