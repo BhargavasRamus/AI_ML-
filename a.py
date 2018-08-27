@@ -14,11 +14,11 @@ M=0
 for i in range(0,len(Y)):
     if Y[i]==-1.0:
         
-        X_1=X_1.drop(X_1.index[i-N])
+        X_1=np.delete(X_1,i-N,axis=0)
         N=N+1
     if Y[i]==1.0:
         
-        X_2=X_2.drop(X_2.index[i-M])
+        X_2=np.delete(X_2,i-N,axis=0)
         M=M+1
 V_X1=np.var(X_1)
 V_X2=np.var(X_2)
