@@ -3,8 +3,8 @@ import pandas
 
 def euclidean_dist(X_test,X):
 	dist = np.zeros((1000,1))
-	for j in range(0,1000,1):
-		dist[j] = np.sqrt((X_test[0]-X[j][0])**2)+((X_test[1]-X[j][1])**2)
+	for j in range(0,1000):
+		dist[j] = np.sqrt(((X_test[0]-X[j][0])**2)+((X_test[1]-X[j][1])**2))
 	dist = np.reshape(dist,1000)
 	return dist
 
