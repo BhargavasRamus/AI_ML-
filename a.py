@@ -26,8 +26,7 @@ M_X2=np.mean(X_2)
 for i in range(0,len(X_test)):
     pr_1 = (len(X_1)/(len(Y)*np.sqrt(2*np.pi*V_X1[0,1]*V_X1[0,0])))*np.exp(-((X_test[i][0]-M_X1[0,0])**2)/(2*V_X1[0,0]))*np.exp(-((X_test[i][1]-M_X1[0,1])**2)/(2*V_X1[0,1]))
     pr_2 = (len(X_2)/(len(Y)*np.sqrt(2*np.pi*V_X2[0,1]*V_X2[0,0])))*np.exp(-((X_test[i][0]-M_X2[0,0])**2)/(2*V_X2[0,0]))*np.exp(-((X_test[i][1]-M_X2[0,1])**2)/(2*V_X2[0,1]))
-
-if pr_1>pr_2:
-  print("the test sample corresponds to Y=1")
-else:
-  print("the test sample corresponds to Y=-1")
+    if pr_1>pr_2:
+        print(X_test[i],"corresponds to Y=1")
+    else:
+        print(X_test[i],"corresponds to Y=-1")
