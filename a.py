@@ -3,8 +3,8 @@ import pandas
 
 X_0=pandas.read_csv("X.csv")
 Y_0=pandas.read_csv("Y.csv")
-X=np.transpose(np.matrix(X_0).astype(float))
-Y=np.matrix(Y_0).astype(float)
+X=np.transpose(np.array(X_0, dtype=np.float64))
+Y=np.array(Y_0, dtype=np.float64)
 X_test = np.array([[1,1],[1,-1],[-1,1],[-1,-1]])
 
 N=0
