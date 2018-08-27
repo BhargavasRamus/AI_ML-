@@ -36,7 +36,7 @@ for i in range(0,len(X_test)):
 	dist_Y = np.transpose(np.array((dist,Y.reshape(1,1000))))
 	sort_1 = bubbleSort(dist_Y)
 	K_elems = sort_1[:K]
-  K_elems = K_elems.ravel()
+	K_elems = K_elems.ravel()
 	expectation = np.sum(K_elems[-k:])
 	if expectation>0 :
 		print(X[i],"corresponds to Y=1 \n")
