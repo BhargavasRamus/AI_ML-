@@ -20,10 +20,10 @@ for i in range(0,len(Y)):
         
         X_2=np.delete(X_2,i-N,axis=0)
         M=M+1
-V_X1=np.var(X_1)
-V_X2=np.var(X_2)
-M_X1=np.mean(X_1)
-M_X2=np.mean(X_2)
+V_X1=np.var(X_1,axis=0)
+V_X2=np.var(X_2,axis=0)
+M_X1=np.mean(X_1,axis=0)
+M_X2=np.mean(X_2,axis=0)
 
 for i in range(0,len(X_test)):
     pr_1 = (len(X_1)/(len(Y)*np.sqrt(2*np.pi*V_X1[0,1]*V_X1[0,0])))*np.exp(-((X_test[i][0]-M_X1[0,0])**2)/(2*V_X1[0,0]))*np.exp(-((X_test[i][1]-M_X1[0,1])**2)/(2*V_X1[0,1]))
