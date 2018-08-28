@@ -11,7 +11,7 @@ def euclidean_dist(X_test,X):
 def bubbleSort(array):
     for passnum in range(len(array)-1,0,-1):
         for i in range(passnum):
-            if alist[i]>array[i+1]:
+            if array[i][0]>array[i+1][0]:
                 temp = array[i][0]
                 array[i] = array[i+1]
                 array[i+1] = temp
@@ -20,8 +20,8 @@ def bubbleSort(array):
                 array[i+1][1] = temp1
     return array
 
-X_0=pandas.read_csv("X.csv")
-Y_0=pandas.read_csv("Y.csv")
+X_0=pandas.read_csv("X.csv",header=None)
+Y_0=pandas.read_csv("Y.csv",header=None)
 X=np.transpose(np.array(X_0, dtype=np.float64))
 Y=np.array(Y_0, dtype=np.float64)
 
